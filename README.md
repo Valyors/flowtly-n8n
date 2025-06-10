@@ -1,48 +1,39 @@
-# n8n-nodes-flowtly
+# Flowtly N8N Integration
 
-Ce node permet d'intégrer Flowtly avec n8n. Il offre les fonctionnalités suivantes :
-
-- Authentification avec l'API Flowtly
-- Récupération des organisations
-- Gestion des tokens JWT
+This project integrates Flowtly with N8N, allowing you to automate your workflows using Flowtly's API.
 
 ## Installation
 
-```bash
-npm install n8n-nodes-flowtly
-```
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/Valyors/flowtly-n8n.git
+   cd flowtly-n8n
+   ```
 
-## Configuration
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-1. Dans n8n, ajoutez un nouveau node Flowtly
-2. Configurez les credentials avec votre email et mot de passe Flowtly
-3. Sélectionnez l'opération souhaitée (Login, Get Organizations, etc.)
+3. Build the project:
+   ```bash
+   npm run build
+   ```
 
-## Opérations disponibles
+4. Link the package to N8N:
+   ```bash
+   npm link
+   ```
 
-### Login
-Authentifie l'utilisateur et retourne un token JWT.
+5. Copy the built files to N8N's custom directory:
+   ```bash
+   cp -r dist/* ~/.n8n/custom/
+   ```
 
-### Get Organizations
-Récupère la liste des organisations accessibles avec le token JWT.
+## Usage
 
-## Développement
+After installation, you can use Flowtly nodes in your N8N workflows. Configure the nodes with your Flowtly API credentials and start automating your processes.
 
-```bash
-# Installation des dépendances
-npm install
+## License
 
-# Compilation
-npm run build
-
-# Tests
-npm run test
-```
-
-## Support
-
-Pour toute question ou problème, veuillez ouvrir une issue sur GitHub.
-
-## Licence
-
-MIT 
+This project is licensed under the MIT License - see the LICENSE file for details. 
