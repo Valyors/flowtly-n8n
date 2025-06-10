@@ -1,71 +1,48 @@
-# Flowtly Connect - n8n Community Node
+# n8n-nodes-flowtly
 
-## Overview
+Ce node permet d'intégrer Flowtly avec n8n. Il offre les fonctionnalités suivantes :
 
-Flowtly Connect is a custom n8n node that integrates with the Flowtly API. It allows you to interact with your Flowtly account directly from n8n workflows.
-
-## Features
-
-- 🔐 Secure authentication using username and password
-- 📊 Get organization information
-- 🔄 Pagination support for large datasets
+- Authentification avec l'API Flowtly
+- Récupération des organisations
+- Gestion des tokens JWT
 
 ## Installation
 
-1. Install the node in your n8n instance:
 ```bash
-npm install flowtly-connect
+npm install n8n-nodes-flowtly
 ```
 
-2. Restart your n8n instance
+## Configuration
 
-## Authentication
+1. Dans n8n, ajoutez un nouveau node Flowtly
+2. Configurez les credentials avec votre email et mot de passe Flowtly
+3. Sélectionnez l'opération souhaitée (Login, Get Organizations, etc.)
 
-To use this node, you need to:
-1. Have a valid Flowtly account
-2. Configure the credentials in n8n using your Flowtly username and password
+## Opérations disponibles
 
-## Available Operations
+### Login
+Authentifie l'utilisateur et retourne un token JWT.
 
-### Organization
-- Get All Organizations
-  - Supports pagination
-  - Returns organization details including:
-    - ID
-    - Name
-    - Type
-    - Status
-    - Slug
-    - Instance
+### Get Organizations
+Récupère la liste des organisations accessibles avec le token JWT.
 
-## Example Usage
+## Développement
 
-1. Add the Flowtly node to your workflow
-2. Configure the credentials
-3. Select "Organization" as the resource
-4. Choose "Get All" operation
-5. Configure pagination if needed
-6. Execute the workflow
+```bash
+# Installation des dépendances
+npm install
 
-## Response Format
+# Compilation
+npm run build
 
-```json
-{
-  "@id": "/api/organizations/1hkzxrub",
-  "@type": "Organization",
-  "id": "1hkzxrub",
-  "type": "production",
-  "status": "active",
-  "name": "Example Org",
-  "slug": "example-org",
-  "instance": "1hkzxrub"
-}
+# Tests
+npm run test
 ```
 
 ## Support
 
-For any issues or questions, please contact the Flowtly team at contact@flowtly.com
+Pour toute question ou problème, veuillez ouvrir une issue sur GitHub.
 
-## License
+## Licence
 
 MIT 
